@@ -30,7 +30,7 @@
 
 ## Architecture Diagram
 
-[Image]
+![Diagram](Diagram.png)
 
 ## Optimization
 
