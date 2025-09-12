@@ -10,15 +10,14 @@
 
 ### As partially described in the overview, first an integration was necessary between the AWS Server and ServiceNow. The steps are laid out below:
 #### 1. Creating a custom application with two tables to track the status and logs of the AWS Server
-
-[Image]
-
 #### 2. Connecting the application to the AWS server by HTTP and an authentication method of Basic Authentication using our Admin credentials. 
 
-[Image] 
+![Diagram](Screenshot-2025-09-12-at-8.02.00.png)
 
 #### 3. Create a script includes and UI Action button to run it. This script would trigger when the UI Action button is selected to send back to the AWS Server and turn it back on. 
-### 4. Validate that the connection is functioning as expected with testing. 
+#### 4. Validate that the connection is functioning as expected with testing. 
+
+![Diagram](Screenshot-2025-09-12-at-8.02.15.png)
 
 ### The next step involved determining how to notify the DevOps team  when the Server was down and how to go about remediating. The following steps were deployed: 
 
@@ -26,7 +25,8 @@
 #### 2. Utilize an AI Search action to find the appropriate KB article with the remediation steps.
 #### 3. Send the identified KB article to the DevOp engineers via slack so it is received timely and action can be taken immediately. 
 
-[Image]
+![Diagram](Screenshot-2025-09-12-at-9.11.02.png)
+
 
 ## Architecture Diagram
 
@@ -36,6 +36,9 @@
 
 ### To optimize this process I would in the Slack message include two URLs, one allowed the DevOps Engineers to go directly to the KB article to read all necessary details as only a small excerpt of text is included and secondly a URL directly to the EC2 Instance where they could immediately select the UI Action button. 
 
+
+![Diagram](Screenshot-2025-09-12-at-5-19-49.png)
+
 ## DevOps Usage
 
 #### 1. Log into the ServiceNow-company.com system 
@@ -44,4 +47,3 @@
 #### 4. Open the application
 #### 5. Select “Trigger EC2 Remediation” button. 
 
-[Image]
